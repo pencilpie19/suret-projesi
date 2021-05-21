@@ -1,0 +1,141 @@
+body {
+  font-family: League Gothic;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*NAVBAR CSS*/
+
+.slogan {
+  font-size: 0.6rem;
+}
+
+.navbar {
+  background-color: #330066 !important;
+  text-decoration: none;
+}
+
+.navbar .navbar-brand {
+  color: #fff;
+  font-weight: 700;
+  margin-left: 3rem;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.navbar .navbar-brand h2 {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.navbar .navbar-brand p {
+  font-size: 1rem;
+}
+
+.navbar .meet-id {
+  font-size: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.navbar .meet-id p {
+  margin-right: 4rem;
+}
+
+.navbar .nav-link {
+  color: #fff;
+  font-size: 1.6rem;
+}
+.navbar .nav-link span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-right: 7px;
+}
+
+.navbar-toggler-icon {
+  color: #fff !important;
+}
+
+.navbar .nav-user {
+  color: #fff;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+  left: -1.7rem;
+}
+
+/*INDEX CSS*/
+
+.meeting-select {
+  text-align: center;
+  margin-top: 8rem;
+}
+
+.meeting-select .option-container {
+  padding: 1rem;
+  border: 2px solid #000;
+  border-radius: 15px;
+  width: 50%;
+}
+
+.meeting-select a {
+  text-decoration: none;
+  color: black;
+  outline: none;
+}
+.meeting-select a:hover {
+  transition: 0.4s;
+  color: #330066;
+}
+.meeting-select i {
+  font-size: 14rem;
+  margin-bottom: 2rem;
+}
+
+.meeting-select p {
+  font-size: 2rem;
+}
+
+.rb-1 {
+  border-right: 2px solid #330066;
+}
+
+/*MEET ROOM CSS*/
+
+canvas {
+  position: absolute;
+  z-index: 99;
+}
+
+.video-container {
+  border-radius: 5px;
+  border: 1px solid #330066;
+  margin: 3rem 1rem;
+}
+
+
+.end-meeting-btn {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  outline: none !important;
+}
+.copy_button{
+  border: 1px solid #fff;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+/*FOOTER CSS*/
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+  color: white;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+}

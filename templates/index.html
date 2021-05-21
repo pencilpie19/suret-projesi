@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suret</title>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!--Style-->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="index.html">
+            <h2>SURET</h2>
+            <p class="slogan">"Artık toplantılar daha eğlenceli"</p>
+        </a>
+        <div class=" meet-id">
+            <p class="text-light"></p>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span>
+                <i class="fas fa-bars text-light"></i>
+            </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto text-light">
+
+            </ul>
+
+            <div class="nav-user">
+                <ul class="navbar-nav mr-4">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/#" id="userDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span>AD SOYAD</span>
+                            <i class="fa fa-user"></i>
+                        </a>
+                        <div class="dropdown-menu pull-left" aria-labelledby="userDropdown">
+                            <a class="dropdown-item" href="/#">
+                                Giriş Yap
+                            </a>
+                            <a class="dropdown-item" href="/#">
+                                Kayıt Ol
+                            </a>
+                            <a class="dropdown-item" href="/#">
+                                Çıkış Yap
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Navbar End-->
+
+    <!--Choose-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-12">
+                <div class="meeting-select rb-1 d-flex justify-content-center">
+                    <div class="option-container">
+                        <a href="meetRoom.html">
+                            <i class="fa fa-plus"></i>
+                            <p>Toplantı Oluştur</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+                <div class="meeting-select d-flex justify-content-center">
+                    <div class="option-container">
+                        <a href="/#" data-toggle="modal" data-target="#join">
+                            <i class="fas fa-long-arrow-alt-right"></i>
+                            <p>Toplantıya Katıl</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Choose End-->
+
+    <!--Create Room Modal-->
+    <div>
+        <div class="modal fade" id="create" tabIndex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="create">
+                            Toplantı Oluşturuldu
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Toplantı ID : Room ID </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                            İptal
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                            Devam
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Create Room Modal-->
+
+    <!--Join Meeting Modal-->
+    <div>
+        <div class="modal fade" id="join" tabIndex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            Toplantıya Katıl
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <input name="meetID" id="meetID" type="text" class="form-control"
+                                placeholder="Toplantı ID"></input>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                            İptal
+                        </button>
+                        <button id="joinButton" type="button" class="btn btn-primary">
+                            Katıl
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Join Meeting Modal-->
+
+    <!--Footer-->
+    <div class="footer">
+        <p><span id="year"></span>
+            <script>
+                document.getElementById("year").innerHTML = new Date().getFullYear();
+            </script>
+            <i class="far fa-copyright"></i> Suret - Tüm Hakları Saklıdır.
+        </p>
+    </div>
+    <!--Footer End-->
+
+    <!--Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+        <!--Join JS-->
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/join.js"></script>
+</body>
+
+</html>
